@@ -1,3 +1,16 @@
+
+header {
+  padding: 2rem;
+  border-bottom: .1rem solid $color-light;
+  @include clearfix;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
 .active {
   font-weight: bold;
   background: $color-light;
