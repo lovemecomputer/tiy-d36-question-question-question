@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Route, Link, NavLink } from 'react-router-dom';
 import container from '../containers/all.js';
 import Header from './header.js';
+import Nav from './nav.js';
 
 class Start extends React.Component {
   constructor(props) {
@@ -11,27 +12,25 @@ class Start extends React.Component {
 
   render() {
     return (
-      <main>
-        <Header username="bitey" />
-        <section>
-          <h2>Hello!</h2>
-          <p>There are *** questions</p>
-          <ul>
-            <li>(insert links to each question, link to each one)</li>
-            <li>(insert links to each question, link to each one)</li>
-            <li>(insert links to each question, link to each one)</li>
-          </ul>
+      <div>
+        <Header username={this.props.username} />
+        <main className="page-frame">
+          <Nav questions={this.props.questions} />
+          <section className="page-content">
+            <h2>Hello!</h2>
+            <p>There are <em>{this.props.questions.length}</em> questions.</p>
 
-          <button
-            onClick={() => this.props.history.push('/question')}
-            type="button"
-          >
-            Start!
-          </button>
-        </section>
-      </main>
+            <button
+              onClick={() => this.props.history.push('/question')}
+              type="button"
+            >
+              Start!
+            </button>
+          </section>
+        </main>
+      </div>
     );
   }
 }
 
-export default connect()(Start);
+export default connect(container.allState)(Start);

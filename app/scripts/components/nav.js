@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import container from '../containers/all.js';
-import { Link } from 'react-router-dom';
+import { Route, Link, NavLink } from 'react-router-dom';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -11,7 +11,18 @@ class Nav extends React.Component {
   render() {
     return (
       <nav>
-        <Link to="#">test nav link</Link>
+        <h3>Questions:</h3>
+        <ul>
+          {this.props.questions.map((question, index) => {
+            return (
+              <li>
+                <NavLink key={question.id} to="/question">
+                  {question.question}
+                </NavLink>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
     );
   }

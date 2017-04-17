@@ -10,10 +10,10 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
+      <header className="page-header">
         <h1>qqq</h1>
         <div className="user-profile-link">
-          {this.props.username}
+          user: {this.props.username}
         </div>
       </header>
     );
