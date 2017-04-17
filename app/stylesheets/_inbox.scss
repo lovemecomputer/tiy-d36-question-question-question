@@ -1,0 +1,20 @@
+.active {
+  font-weight: bold;
+  background: $color-light;
+}
+
+.loading-display {
+  display: none;
+}
+.game-display {
+  display: block;
+}
+
+.loading {
+  .loading-display {
+    display: block;
+  }
+  .game-display {
+    display: none;
+  }
+}
