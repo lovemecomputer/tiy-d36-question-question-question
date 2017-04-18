@@ -66,10 +66,7 @@ export default function AppReducer(currentState, action) {
     case 'SET_ANSWER':
       let newState = currentState;
       newState.questions.forEach( (question, i, array) => {
-        console.log('testing');
-        console.log(question.id, Number(action.answerId));
         if(question.id == Number(action.answerId)) {
-          console.log('>>>>>>DING>>>>>');
           question.answer = action.answerInput;
         }
       });
