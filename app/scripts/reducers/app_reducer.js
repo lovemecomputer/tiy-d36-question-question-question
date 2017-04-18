@@ -56,9 +56,25 @@ let initialState = {
   questions: questionsArray
 };
 
-export default function AppReducer(state, action) {
-  if (state === undefined) {
+export default function AppReducer(currentState, action) {
+  if (currentState === undefined) {
     return initialState;
+  }
+
+  switch (action.type) {
+
+    case 'SET_ANSWER':
+      let newState = currentState;
+      newState.questions.forEach( (question, i, array) => {
+        console.log('testing');
+        console.log(question.id, Number(action.answerId));
+        if(question.id == Number(action.answerId)) {
+          console.log('>>>>>>DING>>>>>');
+          question.answer = action.answerInput;
+        }
+      });
+      console.log(newState);
+      return newState;
   }
   return state;
 }

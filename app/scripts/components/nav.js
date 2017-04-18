@@ -22,7 +22,7 @@ class Nav extends React.Component {
             return (
               <li key={question.id}>
                 <NavLink to={this.pathToQuestion(question.id)}>
-                  {question.question}
+                  {question.id}: {question.question}
                 </NavLink>
               </li>
             );

@@ -11,7 +11,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="page-header">
-        <h1>qqq</h1>
+        <h1><Link to="/">qqq</Link></h1>
         <div className="user-profile-link">
           user: {this.props.username}
         </div>
