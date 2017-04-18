@@ -20,7 +20,7 @@ class Start extends React.Component {
             <h2>🙋🏻 Hello!</h2>
             <p>There are <em>{this.props.questions.length}</em> questions.</p>
             <button
-              onClick={() => this.props.history.push('/question/0')}
+              onClick={() => this.props.history.push('/question/1')}
               type="button"
             >
               Start! 👩🏻‍💻

@@ -1,52 +1,52 @@
 let questionsArray = [
   {
-    id: 0,
-    question: 'What is your favorite color?',
-    answer: ''
-  },
-  {
     id: 1,
-    question: 'Want to brunch?',
+    question: 'What colors do you like?',
     answer: ''
   },
   {
     id: 2,
-    question: 'What is your favorite color?',
+    question: 'What are your feelings on brunch?',
     answer: ''
   },
   {
     id: 3,
-    question: 'Want to brunch?',
+    question: 'And your name?',
     answer: ''
   },
   {
     id: 4,
-    question: 'What is your favorite color?',
+    question: 'Ideal friend date spot?',
     answer: ''
   },
   {
     id: 5,
-    question: 'Want to brunch?',
+    question: 'What is your ideal number of friends to have in one room?',
     answer: ''
   },
   {
     id: 6,
-    question: 'What is your favorite color?',
+    question: 'How much time do you spend engaging with artistic works?',
     answer: ''
   },
   {
     id: 7,
-    question: 'Want to brunch?',
+    question: 'So……………… politics??',
     answer: ''
   },
   {
     id: 8,
-    question: 'What is your favorite color?',
+    question: 'How do you feel about your Zodiac sun sign?',
     answer: ''
   },
   {
     id: 9,
-    question: 'Want to brunch?',
+    question: 'How do you feel about baths?',
+    answer: ''
+  },
+  {
+    id: 10,
+    question: 'What place other than the Earth would you like to end up?',
     answer: ''
   }
 ];
