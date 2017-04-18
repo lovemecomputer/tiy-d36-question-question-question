@@ -5,9 +5,15 @@ import container from '../containers/all.js';
 import Header from './header.js';
 import Nav from './nav.js';
 
-class Start extends React.Component {
+class Question extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  currentQuestion() {
+    return this.props.questions.filter( (current, i, array) => {
+      return current.id == this.props.match.params.questionNumber;
+    })[0];
   }
 
   render() {
@@ -17,14 +23,8 @@ class Start extends React.Component {
         <main className="page-frame">
           <Nav />
           <section className="page-content">
-            <h2>🙋🏻 Hello!</h2>
-            <p>There are <em>{this.props.questions.length}</em> questions.</p>
-            <button
-              onClick={() => this.props.history.push('/question/0')}
-              type="button"
-            >
-              Start! 👩🏻‍💻
-            </button>
+            <h2>Question {this.props.match.params.questionNumber}</h2>
+            <p>{this.currentQuestion().question}</p>
           </section>
         </main>
       </div>
@@ -32,4 +32,4 @@ class Start extends React.Component {
   }
 }
 
-export default connect(container.allState)(Start);
+export default connect(container.allState)(Question);

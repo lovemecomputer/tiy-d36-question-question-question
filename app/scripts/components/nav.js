@@ -8,6 +8,11 @@ class Nav extends React.Component {
     super(props);
   }
 
+  pathToQuestion(id) {
+    let path = '/question/' + id;
+    return path;
+  }
+
   render() {
     return (
       <nav>
@@ -15,8 +20,8 @@ class Nav extends React.Component {
         <ul>
           {this.props.questions.map((question, index) => {
             return (
-              <li>
-                <NavLink key={question.id} to="/question">
+              <li key={question.id}>
+                <NavLink to={this.pathToQuestion(question.id)}>
                   {question.question}
                 </NavLink>
               </li>
@@ -28,4 +33,4 @@ class Nav extends React.Component {
   }
 }
 
-export default connect()(Nav);
+export default connect(container.allState)(Nav);
